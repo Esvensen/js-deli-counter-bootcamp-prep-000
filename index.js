@@ -1,4 +1,5 @@
 var katzDeliLine = [];
+var x = 0;
 
 function takeANumber(katzDeliLine, name) {
   katzDeliLine.push(name);
@@ -19,9 +20,9 @@ function currentLine(katzDeliLine) {
   if (katzDeliLine.length === 0) {
     return "The line is currently empty.";
   } else {
-    var currentQueue = [];
+    let currentQueue = [];
     var i;
-    var placeInQueue;
+    let placeInQueue;
     for (i = 0; i < katzDeliLine.length; i++) {
       placeInQueue = (i + 1);
       let currentServe = katzDeliLine[i];
@@ -48,3 +49,11 @@ currentLine(katzDeliLine); // "The line is currently: 1. Grace, 2. Kent, 3. Matz
 nowServing(katzDeliLine); // "Currently serving Grace."
 
 currentLine(katzDeliLine); // "The line is currently: 1. Kent, 2. Matz"
+
+function giveANumber (katzDeliLine) {
+  x++;
+  katzDeliLine.push(x);
+}
+
+
+
